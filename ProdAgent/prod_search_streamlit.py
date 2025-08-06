@@ -13,7 +13,7 @@ if st.button("분석 시작"):
     if not product_name or not cp_service:
         st.warning("모든 항목을 입력해주세요.")
     else:
-        with st.spinner("AI가 분석 중입니다..."):
+        with st.spinner("분석 중입니다..."):
             result = handle_query(product_name, cp_service)
-            st.success("완료되었습니다!")
+            st.success("분석 완료되었습니다.")
             st.markdown(result)
