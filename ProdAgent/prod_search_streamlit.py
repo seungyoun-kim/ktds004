@@ -1,8 +1,10 @@
+import os
 import streamlit as st
 import pandas as pd
 from backend.agent import handle_query
 from backend.utils import extract_table_from_markdown, draw_price_bar_chart
 
+st.set_page_config(layout="wide")
 st.title("상품 개발 지원 Assistant")
 
 product_name = st.text_input("신규 상품명을 입력하세요")
@@ -21,7 +23,7 @@ if st.button("분석 시작"):
 
             # 테이블 추출 + 그래프 표시
             df = extract_table_from_markdown(result)
-            
+
             # 테이블이 비어있지 않은 경우에만 그래프 그리기
             if not df.empty:
                 st.subheader("유사 상품 월정액 그래프")
@@ -34,3 +36,7 @@ if st.button("분석 시작"):
             # 결과 표시
             st.success("분석 완료되었습니다.")
 
+# ? Azure App Service 호환을 위한 실행 코드 추가
+if __name__ == "__main__":
+    port = int(os.environ.get("WEBSITES_PORT", 8000))  # Azure App Service가 허용하는 포트
+    st.run(host="0.0.0.0", port=port)
