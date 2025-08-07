@@ -36,7 +36,7 @@ if st.button("분석 시작"):
             # 결과 표시
             st.success("분석 완료되었습니다.")
 
-# ? Azure App Service 호환을 위한 실행 코드 추가
-if __name__ == "__main__":
-    port = int(os.environ.get("WEBSITES_PORT", 8000))  # Azure App Service가 허용하는 포트
-    st.run(host="0.0.0.0", port=port)
+# # ? Azure App Service 호환을 위한 실행 코드 추가
+# if __name__ == "__main__":
+#     port = int(os.environ.get("WEBSITES_PORT", 8000))  # Azure App Service가 허용하는 포트
+#     st.run(host="0.0.0.0", port=port)
