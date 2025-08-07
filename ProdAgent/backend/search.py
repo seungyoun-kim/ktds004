@@ -9,6 +9,6 @@ def search_similar_products(query: str) -> list:
         index_name=os.getenv("AZURE_SEARCH_INDEX_NAME"),
         credential=AzureKeyCredential(os.getenv("AZURE_SEARCH_KEY"))
     )
-    results = client.search(query, top=3)
+    results = client.search(query, top=5)
     return [doc["chunk"] for doc in results]
 

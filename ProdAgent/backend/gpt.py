@@ -18,6 +18,7 @@ client = AzureOpenAI(
 def generate_text(prompt: str) -> str:
     response = client.chat.completions.create(
         model="dev-gpt-4.1-mini",
+        temperature=0.0,
         messages=[{"role": "user", "content": prompt}]
     )
     
