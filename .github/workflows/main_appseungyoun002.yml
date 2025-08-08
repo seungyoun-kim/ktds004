@@ -33,6 +33,5 @@ jobs:
       - name: Upload to Azure Web App
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'appseungyoun002'
+          app-name: 'appseungyoun003'
           package: ./ktds04/ProdAgent
-          

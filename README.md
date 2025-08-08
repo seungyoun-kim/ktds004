@@ -29,7 +29,7 @@ Azure OpenAI Service와 Azure AI Search를 활용하여 신규 상품명과 제�
 - agent.py에서 신규 상품명, 제휴 서비스, 검색된 유사 상품 데이터를 활용하여 GPT 모델에 최적화된 프롬프트를 동적으로 구성  
 - "동일한 제휴 서비스 상품 추출", "표 형식으로 정리", "장단점 분석" 등의 구체적인 지시를 통해 모델이 원하는 형식과 내용으로 응답을 생성하도록 유도  
 - CI/CD 파이프라인 구축 (GitHub Actions)  
-- main_appseungyoun002.yml 파일을 통해 GitHub Actions를 설정하여, 코드 수정 및 푸시가 발생할 때마다 자동으로 Azure App Service에 애플리케이션을 배포하는 자동화된 워크플로를 구축  
+- main_appseungyoun003.yml 파일을 통해 GitHub Actions를 설정하여, 코드 수정 및 푸시가 발생할 때마다 자동으로 Azure App Service에 애플리케이션을 배포하는 자동화된 워크플로를 구축  
 - * 개발-배포 주기 단축/안정적인 서비스 운영 제공
 
 ## 4: 라이브 데모 화면 전환
